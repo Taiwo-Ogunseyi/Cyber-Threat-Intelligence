@@ -2,9 +2,9 @@
 
 <h2>Description</h2>
 - Malware Threat Intel Exercise - Research malware hashes from VirusTotal.
-Trigger Wazuh threat intel integration. Report includes: Executive Summary, Technical Analysis, Detection/Correlation, Impact, Recommendations.
+Trigger Wazuh threat intel integration. Report includes: Executive Summary, Technical Analysis, Detection/Correlation, Impact, Recommendations.</br>
 - Phishing Analysis Exercise - Analyze phishing emails (headers, links, attachments).
-Identify IOCs and correlate with threat intel, Report includes: Executive Summary, IOCs, Technical Analysis, Attribution, Mitigation/User Awareness.
+Identify IOCs and correlate with threat intel, Report includes: Executive Summary, IOCs, Technical Analysis, Attribution, Mitigation/User Awareness. </br>
 - OSINT Threat Intel Exercise - Investigate suspicious domains, IPs, or actors using OSINT tools (VirusTotal, Shodan, URLScan, MISP).
 Enrich and analyze data for threat context. Report includes: Executive Summary, Methodology, Key Findings, Correlation (MITRE ATT&CK), Recommendations.<br/>
 
@@ -14,10 +14,10 @@ Enrich and analyze data for threat context. Report includes: Executive Summary, 
   <b>VirusTotal, </b>
   <b>Wazuh, </b>
   <b>Hybrid Analysis, </b>
-  <b>MixToolBox</b>
-  <b>AbuseIPDB</b>
-  <b>URL haus</b>
-  <b>UrlScan.io</b>
+  <b>MixToolBox, </b>
+  <b>AbuseIPDB, </b>
+  <b>URL haus, </b>
+  <b>UrlScan.io, </b>
   <b>MITRE ATT&CK Framework</b>
 
 - <h2>Program walk-through:</h2>
