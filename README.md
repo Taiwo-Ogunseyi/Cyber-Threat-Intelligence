@@ -88,7 +88,7 @@ Analyze phishing emails (headers, links, attachments)
 <br />
 
 <p align="center">
-⚬ The malicious email with its attachment was saved as a .eml file for further analysis. The Based64 code of the saved email was converted to hexadecimal as shown in the screenshot.
+⚬ The malicious email with its attachment was saved as a .eml file for further analysis. The Based64 code of the saved email was converted to hexadecimal as shown in the screenshot.<br/>
 <img src="https://i.imgur.com/sS8QdHP.png" height="70%" width="70%" align="center" alt="Screenshot-2025-07-31-215338" border="0">
 <br />
 
@@ -115,7 +115,7 @@ Investigate suspicious IPs or actors using OSINT tools.
 <br />
 
 <p align="center">  
-￭ MITRE ATT&CK Framework.
+￭ MITRE ATT&CK Framework.<br/>
 <img src="https://i.imgur.com/FegssEX.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
 <br />
 
