@@ -1,0 +1,130 @@
+Executive Summary  
+
+On Sept 30 2025 the security monitoring system identified a file named `RAT.txt` containing the hash of a known Remote Access Trojan (RAT) trojan on the Ubuntu and Windows 10 VM. The detection was facilitated through Wazuh's integration with VirusTotal, which flagged the file as malicious. The presence of this file suggests a compromise or attempt to introduce malicious software into the environment, warranting immediate investigation and response to mitigate potential damage.
+Technical Analysis  
+-File Details
+Name: Known as DCRAT on Malware bazaar, SpotifyStartupTask.exe on Virustotal
+Hash: fe40cc92e71e9d75b99a55c257caccf3947a3973e82309c9f394aefe8721568f
+- Detection Details:  
+  The Wazuh agent detected `RAT.txt` in the `/root` directory of the Ubuntu VM and the Downloads folder of the Windows 10 VM. The file contained a hash value matching a known RAT trojan cataloged in VirusTotal’s database.  
+- File Content & Context:  
+  While the exact contents of `RAT.txt` are not specified, its naming and stored hash imply it was potentially used as a marker, configuration, or payload indicator related to RAT activity. 
+Detection/Correlation  
+- Detection Mechanism:  
+  The Wazuh agent leveraged VirusTotal’s reputation database to identify the hash as malicious, providing real-time threat intelligence.  
+- Correlation with Other Platform:  
+ Hybrid analysis was used to cross-reference with the wazuh network logs and virustotal alerts to establish whether the RAT was actively communicating with an external server, establishing persistence, or executing malicious commands.  
+- Implication:  
+  The detection indicates a likely compromise, with the potential for remote command-and-control (C2) activities, data exfiltration, or further lateral movement within the environment.
+Impact  
+- Security Breach:  
+  The presence of a RAT suggests that attackers may have gained unauthorized access, possibly enabling remote control over the compromised VM.  
+- Data Confidentiality & Integrity:  
+  Sensitive data stored on or accessible through the VM could be at risk of exfiltration or manipulation.  
+- Operational Disruption:  
+  Malicious activity may lead to system instability, unauthorized changes, or service outages if not contained promptly.
+Recommendations  
+1. Immediate Containment:  
+   - Isolate the affected VM from the network to prevent further malicious activity.  
+2. Detailed Investigation:  
+   - Analyze system logs, process activity, and network connections to identify the origin and scope of the compromise.  
+3. Malware Removal & Forensics:  
+   - Remove the `RAT.txt` file and perform a comprehensive malware scan.  
+   - Conduct a forensic analysis to determine persistence mechanisms and extent of compromise.  
+4. Patch & Update:  
+   - Ensure the VM’s operating system and all software are up to date with the latest security patches.  
+5. Enhanced Monitoring:  
+   - Increase monitoring on similar systems, especially for hash matches and suspicious file placements.  
+6. User Awareness & Access Control:  
+   - Review access controls; restrict privilege escalation and monitor for insider threats.  
+7. Review Security Policies:  
+   - Update incident response procedures and security policies to include handling of similar threats.
+
+
+
+Executive Summary  
+
+This report presents a comprehensive analysis of a suspected phishing email received by the organization. The investigation utilized several tools and techniques, including MXToolbox, AbuseIPDB, and HxD, to examine the email header, embedded links, and attachments. The findings confirm malicious intent, with indicators of compromise (IoCs) pointing to known malicious infrastructure. Recommendations are provided for mitigation and improving user awareness to prevent future incidents.
+Indicators of Compromise (IoCs)
+- Suspicious Email Header:
+  - Sender IP identified as malicious via AbuseIPDB (IP: 89.144.44.2, flagged as spam/malicious)
+  - SPF and DKIM records failed or misconfigured, indicating possible email spoofing
+- Malicious Links:
+  - URL redirects to a known malicious domain (malicious-example.com) flagged by MXToolbox
+  - URL contains obfuscated parameters designed to evade detection
+- Attachment:
+  - Executable file disguised as a png (e.g., image.png)
+  - Hex data analysis via HxD revealed embedded scripts and obfuscated code capable of executing malicious payloads
+
+Technical Analysis
+1. Email Header Analysis:
+- The email header shows the originating IP (89.144.44.2) was flagged by AbuseIPDB for malicious activity.
+- The 'From' address was spoofed; the domain did not match the sending IP's reputation.
+- SPF and DKIM signature was missing or invalid, indicating potential spoofing.
+2. Link Analysis:
+- The embedded URL redirects through multiple servers, ultimately pointing to `malicious-example.com`.
+- MXToolbox flagged the domain as involved in phishing campaigns.
+- URL parameters included tokens typical of credential harvesting schemes.
+3. Attachment Analysis:
+- The attached file, named `image.png`, is an executable disguised as an image.
+- Using HxD, hex analysis revealed embedded scripts that, when executed, can download additional payloads or steal information.
+
+ Mitigation and User Awareness
+
+Immediate Actions:
+- Quarantine the email and delete it from all user inboxes.
+- Block malicious domains and IP addresses at the network perimeter.
+- Scan affected systems for malware using updated antivirus tools.
+
+Long-term Recommendations:
+- Implement email authentication protocols (SPF, DKIM, DMARC) to prevent spoofing.
+- Educate users on recognizing phishing indicators, such as suspicious links, unexpected attachments, or spoofed sender addresses.
+- Deploy advanced email filtering solutions with real-time URL and attachment scanning.
+- Regularly update and patch all systems to mitigate exploitation of vulnerabilities.
+
+User Awareness Campaigns:
+- Conduct periodic training sessions on phishing awareness.
+- Share examples of recent phishing tactics observed in the wild.
+- Encourage verification of unexpected requests via separate communication channels.
+
+
+
+Executive Summary  
+A suspicious domain, identified via the URLhaus threat repository, was investigated and confirmed to be malicious. OSINT analysis revealed that this domain is actively used for cybercriminal operations, primarily functioning as a platform for phishing campaigns and likely as a Command and Control (C2) server for malware. The adversary employs this infrastructure to gain initial access to victim networks. This activity has been mapped to several stages of the MITRE ATT&CK framework, including Resource Development, Initial Access, and Command and Control.
+It is recommended that security controls be updated to block this domain at the network and email perimeter immediately to prevent potential compromise.
+
+Methodology
+The investigation followed a structured OSINT methodology to enrich and analyze the threat indicator:
+Identification: A suspicious domain was selected from the URLhaus database, which aggregates known malicious URLs.
+Confirmation & Enrichment: The domain was analyzed using multiple OSINT platforms to confirm its malicious status and gather contextual data:
+VirusTotal: Used to aggregate antivirus vendor detections and behavioral analysis of files associated with the domain.
+URLScan.io: Used to perform a live scan of the domain, capturing screenshots, HTTP traffic, redirect chains, and resource details.
+Correlation: The technical findings were mapped to the MITRE ATT&CK framework to understand the adversary's tactics, techniques, and procedures (TTPs).
+Reporting: Findings were synthesized into this report to facilitate defensive actions.
+
+
+Key Findings
+3.1. Domain Maliciousness Confirmed
+The domain was listed on URLhaus, indicating it is a known threat used for distributing malware or hosting phishing kits.
+VirusTotal analysis returned multiple positive detections from leading antivirus engines, confirming the domain's malicious reputation.
+URLScan.io analysis provided visual and technical confirmation, potentially revealing a phishing landing page or malicious script hosting.
+
+Associated Risks
+Credential Theft: If the domain hosts a phishing page, it poses a direct risk of credential harvesting from unsuspecting users.
+Malware Infection: Successful access could lead to the download and execution of malware, resulting in a full-scale network compromise.
+Data Exfiltration: A established C2 channel could be used to steal sensitive data from compromised systems.
+
+
+Recommendations
+Immediate action is recommended to mitigate the threat posed by this malicious domain.
+4.1. Short-Term (Immediate Actions)
+Network Blocking: Update firewall, proxy, and DNS security policies to block all traffic to and from the identified malicious domain.
+Email Filtering: Configure email security gateways (e.g., Secure Email Gateways) to quarantine emails containing links to this domain.
+Endpoint Detection & Response (EDR): Deploy a custom IOC (Indicator of Compromise) hunt for any historical signs of communication with this domain across the enterprise.
+
+4.2. Long-Term (Strategic Enhancements)
+Security Awareness Training: Reinforce training for end-users to identify and report phishing attempts, focusing on scrutinizing embedded links and sender addresses.
+Threat Intelligence Integration: Subscribe to and integrate OSINT feeds (like URLhaus) and other threat intelligence sources into security appliances for proactive blocking.
+Enhance Monitoring: Strengthen network and endpoint monitoring for connections to newly registered domains (NRDs) or domains with low reputation scores, which are common patterns in adversary infrastructure.
+
+
