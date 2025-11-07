@@ -64,72 +64,59 @@ Hybrid-analysis was used to further prove that the malware was indeed malicious.
 <br />
 <br />
 
-<h4> Phase 2: Phishing Analysis Exercise</h4>
+- <h4> Phase 2: Phishing Analysis Exercise</h4>
+Analyze phishing emails (headers, links, attachments)
+
 <p align="center">
-⚬ The header information and content of a spam email was analyzed using mxtoolbox. The SPF and the DKIM of the email both failed as shown in the image below.
+⚬ The header information and content of a spam email was analyzed using mxtoolbox. The SPF and the DKIM of the email both failed as shown below <br/>
 <img src="https://i.imgur.com/IfXzO9s.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
 <br />
+
 <p align="center">
 ⚬ Further analysis of the email’s header reveals the sender’s ip address, the send from, and the reply-to path. A closer look shows that the reply-to path and the send from emails are different.
 <img src="https://i.imgur.com/aUpooZb.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
 <br />
+
 <p align="center">
 ⚬ The sender’s ip address was searched on ‘AbuseipDB’ and the result reveal that the ip address is malicious 
 <img src="https://i.imgur.com/OzSGryR.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
 <br />
+
 <p align="center">
 ⚬ The sender’s ip address was searched on ‘AbuseipDB’ and the result reveal that the ip address is malicious
 <img src="https://i.imgur.com/gvNsYSA.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
 <br />
+
 <p align="center">
 ⚬ The malicious email with its attachment was saved as a .eml file for further analysis. The Based64 code of the saved email was converted to hexadecimal as shown in the screenshot.
-<img src="https://i.imgur.com/sS8QdHP.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
+<img src="https://i.imgur.com/sS8QdHP.png" height="70%" width="70%" align="center" alt="Screenshot-2025-07-31-215338" border="0">
 <br />
+
 <p align="center">
 ⚬ Using HxD, the hexadecimal code was saved as a .png file to retrieve the malicious attachment in the email
 <img src="https://i.imgur.com/2IHewbs.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
 <br />
   
-- <h4> Phase 2: Network Activity & Capture</h4>
-
+- <h4> Phase 3: OSINT Threat Intel Exercise </h4>
+Investigate suspicious IPs or actors using OSINT tools.
 <p align="center">
-⚬ Perform basic scanning and ping from kali to Windows
-<img src="https://i.imgur.com/99tt1br.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
-<img src="https://i.imgur.com/Z1rDqG5.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
+⚬ A suspicious domain was selected on url haus website:
+<img src="https://i.imgur.com/7UnLnUK.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
 <br />
 
 <p align="center">
-⚬ Perform basic scanning and ping from kali to Ubuntu.
-<img src="https://i.imgur.com/1HhPjxW.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
-<img src="https://i.imgur.com/MgW1KAt.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
-<br />
-
-- <h4> Phase 3: Mitigation </h4>
-1. Propose Improvements
-<p align="center">
-⚬ Configure pfSense VLAN segmentation with at least two VLANs:
-<img src="https://i.imgur.com/lattrvL.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
-<br />
-
-<p align="center">
-￭ VLAN 1: Employee workstations (Windows).
-<img src="https://i.imgur.com/iZu6Aoq.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
-<img src="https://i.imgur.com/wFW4fhf.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
+￭ The domain was checked on virustotal to confirm if it is malicious and the screenshot is presented below. 
+<img src="https://i.imgur.com/8yp1xdN.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
 <br />
   
 <p align="center">  
-￭ Setting firewall rules for Windows Workstation VLAN
-<img src="https://i.imgur.com/PnB3L39.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
+￭ Urlscan was also used to scan the domain to see if it’s malicious as shown in the screenshot
+<img src="https://i.imgur.com/XHGp913.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
 <br />
 
 <p align="center">  
-￭ VLAN 2: Backend servers (Ubuntu).
-<img src="https://i.imgur.com/SGhCLd8.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
-<br />
-
-<p align="center">  
-⚬ Setting firewall rules for the DMZ VLAN
-<img src="https://i.imgur.com/QYjdZ0W.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
+￭ MITRE ATT&CK Framework.
+<img src="https://i.imgur.com/FegssEX.png" height="70%" width="70%" alt="Screenshot-2025-07-31-215338" border="0">
 <br />
 
 </p>
