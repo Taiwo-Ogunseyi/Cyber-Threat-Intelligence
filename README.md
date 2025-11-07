@@ -34,11 +34,11 @@ A further research on the malware was done on Virustotal to confirm that it’s 
 <img src="https://i.imgur.com/50GT7tS.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
 
 <p align="center">
-Additional information about the names and history of the malware is depicted in the screenshot below:
+Additional information about the names and history of the malware is shown:
 <img src="https://i.imgur.com/WSwSMNR.png" height="70%" width="70%" alt="network-setup" border="0"> <br/> 
 
 <p align="center">
-Wazuh threat intel was triggered on the Windows 10 workstation to identify the malware and alert the SOC Team. To achieve this, the hash of the malware was saved in a .txt file and dropped in the downloads folder on the Windows 10 workstation: 
+Wazuh threat intel was triggered on the Windows 10 workstation to identify the malware and alert the SOC Team. The hash of the malware was saved in a .txt file and dropped in the downloads folder on the Windows 10 workstation: 
 <img src="https://i.imgur.com/ZarzhnW.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
 
 <p align="center">
@@ -46,11 +46,8 @@ The malware saved as rat.txt was picked up in the downloads folder by the wazuh 
 <img src="https://i.imgur.com/Pn6wX2Q.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
 
 <p align="center">
-Wazuh threat intel was triggered on the Ubuntu workstation to identify the malware and alert the SOC Team. To achieve this, the hash of the malware was saved in the ‘/root’ directory on the Ubuntu workstation: 
-<img src="https://i.imgur.com/9s6idv7.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
-
-<p align="center">
-Wazuh threat intel was triggered on the Ubuntu workstation to identify the malware and alert the SOC Team. To achieve this, the hash of the malware was saved in the ‘/root’ directory on the Ubuntu workstation:
+Wazuh threat intel was triggered on the Ubuntu workstation to identify the malware. The hash of the malware was saved in the ‘/root’ directory on the Ubuntu workstation: <br/>
+<img src="https://i.imgur.com/9s6idv7.png" height="70%" width="70%" alt="network-setup" border="0">
 <img src="https://i.imgur.com/8lTKZYe.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
 
 <p align="center">
