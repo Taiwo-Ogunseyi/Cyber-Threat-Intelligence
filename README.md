@@ -1,4 +1,4 @@
-# Cyber-Threat-Intelligence
+<img width="3980" height="105" alt="image" src="https://github.com/user-attachments/assets/c17860bb-0d5a-42be-ba91-29e24c4f199a" /># Cyber-Threat-Intelligence
 
 <h2>Description</h2>
 <p>- Malware Threat Intel Exercise - Research malware hashes from VirusTotal.
@@ -40,6 +40,11 @@ Wazuh threat intel was triggered on the Ubuntu workstation to identify the malwa
 <img src="https://i.imgur.com/9s6idv7.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
 Wazuh threat intel was triggered on the Ubuntu workstation to identify the malware and alert the SOC Team. To achieve this, the hash of the malware was saved in the ‘/root’ directory on the Ubuntu workstation: <br/>
 <img src="https://i.imgur.com/8lTKZYe.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
+The malware saved as Rat.txt was picked up in the ‘/root’ directory of Ubuntu workstation by the wazuh server and alert was triggered: <br/>
+<img src="https://i.imgur.com/ESQ2eOn.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
+Hybrid-analysis was used to further prove that the malware was indeed malicious. The saved hash was upload on Hybrid-analysis and the analysis overview is presented in the screenshot below: <br/>
+<img src="https://i.imgur.com/qDzwLwr.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
+  
 <br />
 <br />
 
