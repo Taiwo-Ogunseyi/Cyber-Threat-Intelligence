@@ -28,10 +28,18 @@ Research malware hashes from VirusTotal
 <p align="center">
 A malware hash was gotten from Malware bazaar. The malware is a remote access trojan (RAT): <br/>
 <img src="https://i.imgur.com/zCOsZZQ.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
-A further research on the malware was done on Virustotal to confirm that it’s truly a malware: </br>
+A further research on the malware was done on Virustotal to confirm that it’s truly a malware: <br/>
 <img src="https://i.imgur.com/50GT7tS.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
-Additional information about the names and history of the malware is depicted in the screenshot below:</br>
+Additional information about the names and history of the malware is depicted in the screenshot below:<br/>
 <img src="https://i.imgur.com/WSwSMNR.png" height="70%" width="70%" alt="network-setup" border="0"> <br/> 
+Wazuh threat intel was triggered on the Windows 10 workstation to identify the malware and alert the SOC Team. To achieve this, the hash of the malware was saved in a .txt file and dropped in the downloads folder on the Windows 10 workstation: <br/>
+<img src="https://i.imgur.com/ZarzhnW.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
+The malware saved as rat.txt was picked up in the downloads folder by the wazuh server and alert was triggered: <br/>
+<img src="https://i.imgur.com/Pn6wX2Q.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
+Wazuh threat intel was triggered on the Ubuntu workstation to identify the malware and alert the SOC Team. To achieve this, the hash of the malware was saved in the ‘/root’ directory on the Ubuntu workstation: <br/>
+<img src="https://i.imgur.com/9s6idv7.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
+Wazuh threat intel was triggered on the Ubuntu workstation to identify the malware and alert the SOC Team. To achieve this, the hash of the malware was saved in the ‘/root’ directory on the Ubuntu workstation: <br/>
+<img src="https://i.imgur.com/8lTKZYe.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
 <br />
 <br />
 
