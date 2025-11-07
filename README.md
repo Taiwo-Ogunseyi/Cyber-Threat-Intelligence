@@ -1,4 +1,4 @@
-<img width="3980" height="105" alt="image" src="https://github.com/user-attachments/assets/c17860bb-0d5a-42be-ba91-29e24c4f199a" /># Cyber-Threat-Intelligence
+# Cyber-Threat-Intelligence
 
 <h2>Description</h2>
 <p>- Malware Threat Intel Exercise - Research malware hashes from VirusTotal.
