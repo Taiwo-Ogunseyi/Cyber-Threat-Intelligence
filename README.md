@@ -22,14 +22,16 @@ Enrich and analyze data for threat context. Report includes: Executive Summary, 
 
 - <h2>Program walk-through:</h2>
 
-- <h4> Phase 1: Simulation & Detection</h4>
-Windows 10 Workstation - Perform repeated failed login attempts (6–8 times).
+- <h4> Phase 1: Malware Threat Intel Exercise</h4>
+Research malware hashes from VirusTotal
 
 <p align="center">
-Simulating Brute force attack on Windows 10 Workstation and its log capture in Event Viewer & Wazuh: <br/>
-<img src="https://i.imgur.com/n3FVZPm.png" height="70%" width="70%" alt="network-setup" border="0">
-<img src="https://i.imgur.com/FULq3Lo.png" height="70%" width="70%" alt="network-setup" border="0">
-<img src="https://i.imgur.com/ODzzrzO.png" height="70%" width="70%" alt="network-setup" border="0">  
+A malware hash was gotten from Malware bazaar. The malware is a remote access trojan (RAT): <br/>
+<img src="https://i.imgur.com/zCOsZZQ.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
+A further research on the malware was done on Virustotal to confirm that it’s truly a malware: </br>
+<img src="https://i.imgur.com/50GT7tS.png" height="70%" width="70%" alt="network-setup" border="0"> <br/>
+Additional information about the names and history of the malware is depicted in the screenshot below:</br>
+<img src="https://i.imgur.com/WSwSMNR.png" height="70%" width="70%" alt="network-setup" border="0"> <br/> 
 <br />
 <br />
 
