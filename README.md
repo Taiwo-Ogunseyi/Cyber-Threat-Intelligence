@@ -1,10 +1,10 @@
 # Cyber-Threat-Intelligence
 
 <h2>Description</h2>
-- Malware Threat Intel Exercise - Research malware hashes from VirusTotal.
-Trigger Wazuh threat intel integration. Report includes: Executive Summary, Technical Analysis, Detection/Correlation, Impact, Recommendations.</br>
-- Phishing Analysis Exercise - Analyze phishing emails (headers, links, attachments).
-Identify IOCs and correlate with threat intel, Report includes: Executive Summary, IOCs, Technical Analysis, Attribution, Mitigation/User Awareness. </br>
+<p>- Malware Threat Intel Exercise - Research malware hashes from VirusTotal.
+Trigger Wazuh threat intel integration. Report includes: Executive Summary, Technical Analysis, Detection/Correlation, Impact, Recommendations.</br></p>
+<p>- Phishing Analysis Exercise - Analyze phishing emails (headers, links, attachments).
+Identify IOCs and correlate with threat intel, Report includes: Executive Summary, IOCs, Technical Analysis, Attribution, Mitigation/User Awareness. </br></p>
 - OSINT Threat Intel Exercise - Investigate suspicious domains, IPs, or actors using OSINT tools (VirusTotal, Shodan, URLScan, MISP).
 Enrich and analyze data for threat context. Report includes: Executive Summary, Methodology, Key Findings, Correlation (MITRE ATT&CK), Recommendations.<br/>
 
