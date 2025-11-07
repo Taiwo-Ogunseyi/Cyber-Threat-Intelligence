@@ -1,0 +1,11 @@
+Executive Summary  
+
+On Sept 30 2025 the security monitoring system identified a file named `RAT.txt` containing the hash of a known Remote Access Trojan (RAT) trojan on the Ubuntu and Windows 10 VM. The detection was facilitated through Wazuh's integration with VirusTotal, which flagged the file as malicious. The presence of this file suggests a compromise or attempt to introduce malicious software into the environment, warranting immediate investigation and response to mitigate potential damage.
+Technical Analysis  
+-File Details
+Name: Known as DCRAT on Malware bazaar, SpotifyStartupTask.exe on Virustotal
+Hash: fe40cc92e71e9d75b99a55c257caccf3947a3973e82309c9f394aefe8721568f
+- Detection Details:  
+  The Wazuh agent detected `RAT.txt` in the `/root` directory of the Ubuntu VM and the Downloads folder of the Windows 10 VM. The file contained a hash value matching a known RAT trojan cataloged in VirusTotal’s database.  
+- File Content & Context:  
+  While the exact contents of `RAT.txt` are not specified, its naming and stored hash imply it was potentially used as a marker, configuration, or payload indicator related to RAT activity. 
